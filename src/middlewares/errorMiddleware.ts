@@ -21,7 +21,8 @@ function errorHandler(err, _req: Request, res: Response, _next: NextFunction) {
         return res.status(422).send(err.message);
     }
 
-    return res.status(500).send(err.message);
+    console.log(err)
+    return res.status(500).send(err);
 }
 
 export default errorHandler;
